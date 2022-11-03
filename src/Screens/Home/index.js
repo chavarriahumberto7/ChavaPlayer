@@ -1,12 +1,16 @@
 import React from 'react';
 import { View, Switch, Button } from 'react-native';
-import styled, { useTheme } from 'styled-components/native';
+// import styled, { useTheme } from 'styled-components/native';
+import styled
+// , { useTheme } 
+from 'styled-components';
+
 
 import { Fonts, Images, Metrics } from 'Constants';
 import { McText, McImage, McAvatar } from 'Components';
 
 const Home = ({ navigation }) => {
-  const { colors } = useTheme();
+  // const { colors } = useTheme();
   return (
     <Container>
       <McAvatar
@@ -15,7 +19,7 @@ const Home = ({ navigation }) => {
         round
         style={{ marginBottom: 30 }}
       ></McAvatar>
-      <McText bold size={24} color={colors.text} style={{ marginBottom: 30 }}>
+      <McText bold size={24} color={'red'} style={{ marginBottom: 30 }}>
         MCRN Expo Easy Starter
       </McText>
       <Button
@@ -32,10 +36,10 @@ const Container = styled.SafeAreaView`
   flex: 1;
   justify-content: center;
   align-items: center;
-  background: ${(props) => props.theme.colors.background};
+  background: ${'white'};
 `;
 const Text = styled.Text`
   font-size: 30px;
-  color: ${(props) => props.theme.colors.text};
+  color: ${'red'};
 `;
 export default Home;

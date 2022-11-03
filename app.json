@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "mcrn-expo-easy-starter",
-    "slug": "mcrn-expo-easy-starter",
+    "name": "ChavaPlayerApp",
+    "slug": "ChavaPlayerApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

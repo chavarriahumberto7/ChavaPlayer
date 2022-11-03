@@ -1,15 +1,15 @@
 const Colors = {
-  background: '#fafafa',
+  background: '#1A0938',
 
-  primary: '#2089dc',
-  secondary: '#8F0CE8',
+  primary: '#ED1BA3',
+  secondary: '#361E60',
   accent: '#22DDF2',
   grey0: '#393e42',
-  grey1: '#43484d',
-  grey2: '#5e6977',
-  grey3: '#86939e',
-  grey4: '#bdc6cf',
-  grey5: '#e1e8ee',
+  grey1: '#090909',
+  grey2: '#464646',
+  grey3: '#A7A7A7',
+  grey4: '#E7E7E7',
+  grey5: '#FFFFFF',
   greyOutline: '#bbb',
   success: '#52c41a',
   error: '#ff190c',
@@ -24,7 +24,8 @@ const Colors = {
   notification: 'rgb(255, 59, 48)',
   text: 'rgb(28, 28, 30)',
 
-  linearGradient: ['',''],
+  linearGradient: ['#D91193','#22DDF2'],
+  linearGradient2: ['#22DDF2','#D91193'],
 
   transparent: 'rgba(0,0,0,0)',
 

@@ -3,7 +3,7 @@ import { ActivityIndicator } from 'react-native';
 import * as Font from 'expo-font';
 
 import {AppNavigator} from 'Navigation'; 
-import ThemeManager from 'Themes';
+// import ThemeManager from 'Themes';
 import { Fonts } from 'Constants';
 
 const App = ({ params }) => {
@@ -20,9 +20,9 @@ const App = ({ params }) => {
     });
 
   return assetsLoaded ? (
-    <ThemeManager>
+    // <ThemeManager>
       <AppNavigator />
-    </ThemeManager>
+    // </ThemeManager>
   ) : (
     <ActivityIndicator size="small"></ActivityIndicator>
   );

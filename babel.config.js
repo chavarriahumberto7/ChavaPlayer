@@ -18,7 +18,9 @@ module.exports = function (api) {
             Mock: './src/Mock',
           },
         },
+        
       ],
+      'react-native-reanimated/plugin',
     ],
   };
 };

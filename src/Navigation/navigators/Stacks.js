@@ -2,24 +2,31 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { Home, Profile } from 'Screens';
+import { Home, Profile,Player,Onboarding, Library } from 'Screens';
 
 const Stack = createStackNavigator();
 
 const Stacks = ({ params }) => (
-  <Stack.Navigator initialRouteName="Home">
+  <Stack.Navigator initialRouteName="Onboarding">
     <Stack.Screen
-      name="Home"
-      component={Home}
+      name="Onboarding"
+      component={Onboarding}
       options={{
         headerShown: false,
       }}
     />
     <Stack.Screen
-      name="Profile"
-      component={Profile}
+      name="Player"
+      component={Player}
       options={{
-        headerShown: true,
+        headerShown: false,
+      }}
+    />
+    <Stack.Screen
+      name="Library"
+      component={Library}
+      options={{
+        headerShown: false,
       }}
     />
   </Stack.Navigator>
