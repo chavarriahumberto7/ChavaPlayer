@@ -5,7 +5,7 @@ import {McText, McImage,PlayButton} from 'Components'
 import {Colors,Images} from 'Constants'
 import Slider from '@react-native-community/slider'
 
-const {width} = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 
 const SelectedPlayList = ({selected,selectedPlayList}) => {
@@ -67,10 +67,10 @@ const SelectedPlayList = ({selected,selectedPlayList}) => {
                 
                     <McImage 
                     style={{
-                        borderRadius:214,
-                        height:214,
-                        width:214,
-                        marginHorizontal:81,
+                        borderRadius:width/2,
+                        height:width/2,
+                        width:width/2,
+                        // marginHorizontal:81,
                         marginVertical:60,
                     }}
                     source={item?.artwork} />
@@ -119,7 +119,8 @@ const SelectedPlayList = ({selected,selectedPlayList}) => {
             style={{
               marginTop:16,
               justifyContent:'center',
-              alignItems:'center'
+              alignItems:'center',
+              height:height*0.1,
             }}
             >
               <McText semi size={24} color={Colors.grey5}>
@@ -249,20 +250,26 @@ const SelectedPlayList = ({selected,selectedPlayList}) => {
 
 
 const MusicDetailSection=styled.View`
-margin:5px 10px;
+margin:25px 0px;
 justify-content:center;
 align-items:center;
+width:${width}px;
+height:${height*0.4}px
 
 `;
 
 const SlicerSection=styled.View`
-margin: 10px 24px
+margin: 10px 24px;
+height:${height*0.05}px;
+justify-content:center;
+
 `;
 const ControlSection=styled.View`
 margin:22px 24px;
 flex-direction:row;
 justify-content:space-between;
 align-items:center;
+
 `;
 
 
