@@ -16,15 +16,8 @@ import {Colors,Images,Metrics} from 'Constants'
 import {McText, McImage,} from 'Components'
 import SelectedPlayList from '../../Components/SelectedPlayList'
 
-
-
-
-
-
-
 const Player = ({route,navigation}) => {
   
-
  const [selected,setSelected]=useState(null);
  const [selectedPlayList,setSelectedPlaylist]=useState(null);
 
@@ -36,9 +29,6 @@ useEffect(()=>{
   setSelectedPlaylist(playList);
   
 },[])
-
-
-
 
   return (
    <Container>
@@ -54,16 +44,14 @@ useEffect(()=>{
     </HeaderSection>
     
   
-
     {/* Music Detail section */}
 
-    <SelectedPlayList
-    selected={selected}
-    selectedPlayList={selectedPlayList}    
-    />
+        <SelectedPlayList
+        selected={selected}
+        selectedPlayList={selectedPlayList}    
+        />
     
-
-  
+ 
 
     {/* Lirycs section */}
     <TouchableOpacity activeOpacity={0.7} onPress={()=>{

@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, Dimensions } from 'react-native'
 import React from 'react'
 import {McText, McImage, PlayButton} from 'Components'
 
@@ -7,6 +7,9 @@ import { LinearGradient } from 'expo-linear-gradient'
 import Svg, {Circle,G, Path} from 'react-native-svg'
 import {Colors,Images,Metrics} from 'Constants'
 import styled from 'styled-components'
+
+
+const {width} = Dimensions.get('window');
 
 const BottomBar = ({
     children
@@ -30,7 +33,7 @@ const BottomBar = ({
             start={{x:0, y:0}}
             end={{x:1,y:1}}
             style={{
-                width:321 -84,
+                width:Number(width) -84 ,
                 height:3,
                 flexDirection:'row',
                 justifyContent:'flex-start',
@@ -41,7 +44,7 @@ const BottomBar = ({
             start={{x:0, y:0}}
             end={{x:1,y:1}}
             style={{
-                width:321 -84,
+                width:Number(width) -84,
                 height:3,
                 flexDirection:'row',
                 justifyContent:'flex-start',
@@ -63,7 +66,7 @@ const BottomBar = ({
 
                 }}></View>
                 <View style={{
-                    width:321-84-150,
+                    width:Math.floor(width)-84-150,
                     height:3,
                     borderRadius:3,
                     alignSelf:'flex-end',
@@ -97,7 +100,7 @@ const BottomBar = ({
         <View style={{
             marginVertical:7,
             marginHorizontal:7,
-            width:321-84+70,
+            width:Math.floor(width)-84+70,
             height:70,
             borderRadius:70,
             backgroundColor:Colors.secondary,
@@ -113,7 +116,7 @@ const BottomBar = ({
 }
 
 const Container=styled.View`
-width:321px;
+width:${Math.floor(width)}px;
 height:84px;
 border-radius:84px;
 background-color:transparent;

@@ -16,10 +16,14 @@ import {Colors,Images,Metrics} from 'Constants'
 import {McText, McImage, PlayButton} from 'Components'
 import {dummyData}  from '../../Mock';
 import BottomBar from './BottomBar'
+import {useDimentions} from '../../Hooks'
 
 const Library = ({navigation}) => {
 
-  
+  const {width}=useDimentions();
+
+
+
 
 const _renderItem=({item,index})=>{
 
@@ -134,14 +138,19 @@ const _renderItem=({item,index})=>{
 
       </TitleSection>
 
-      <View>
+      <View style={{
+      
+      }}>
         <ScrollView
         style={{
-            height:130,
+            height:Math.floor(width*0.6),
+            marginBottom:width/4
+            
         }}
         contentContainerStyle={{
           marginTop:14,
           height:200,
+          
         }}
         >
 
@@ -193,8 +202,12 @@ const _renderItem=({item,index})=>{
       {/* Bottom bar section react-native-svg */}
 
       <BottomSection>
-        <BottomBar>
-          <View
+      <BottomBar style={{
+        flex:1,
+        alignItems:'center',
+        alignSelf:'center'
+      }}>
+        <View
           style={{
             flexDirection:'row',
             justifyContent:'space-between',
@@ -250,10 +263,11 @@ const Container=styled.SafeAreaView`
 flex:1;
 background-color: ${Colors.background};
 
+
 `;
 
 const SearchSection=styled.View`
-width:327px;
+
 height:52px;
 border-radius:30px;
 background-color:${Colors.secondary};
@@ -292,12 +306,14 @@ const MusicCircle=styled.View`
 const BottomSection=styled.View`
 margin:0px 24px;
 flex-direction:row;
-justify-content:space-between;
-align-items:flex-start;
+justify-content:center;
+align-items: center;
 position:absolute;
 bottom:50px;
+right:10px;
 left:0px;
 z-index:1;
+background-color:transparent;
 
 `;
 
