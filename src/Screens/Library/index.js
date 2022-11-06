@@ -7,7 +7,7 @@
 //[] Bottom bar section react-native-svg
 //[] 
 
-import { View, Text,TextInput, FlatList, TouchableWithoutFeedback,ScrollView,StatusBar
+import { View, Text,TextInput, FlatList, TouchableWithoutFeedback,ScrollView,StatusBar,TouchableOpacity
 
 } from 'react-native'
 import React from 'react'
@@ -24,7 +24,7 @@ const Library = ({navigation}) => {
 const _renderItem=({item,index})=>{
 
     return(
-    <View>
+    <TouchableOpacity onPress={()=>{ navigation.navigate('Player',{selectedMusic:item})}}>
       <View 
       style={{
         marginTop:16,
@@ -37,7 +37,7 @@ const _renderItem=({item,index})=>{
           marginBottom:12,
         }}
         key={index}
-        source={item.thumbnail}
+        source={item.artwork}
         />
         <McText semi size={16} color={Colors.grey5}>{item.name}</McText>
         <McText medium size={12} color={Colors.grey3}
@@ -46,7 +46,7 @@ const _renderItem=({item,index})=>{
         }}
         >{item.songs} songs</McText>
       </View>
-    </View>
+    </TouchableOpacity>
   )
 
 }
@@ -151,7 +151,7 @@ const _renderItem=({item,index})=>{
               <FavoriteItemView key={index}>
 
                 <TouchableWithoutFeedback 
-                onPress={()=> navigation.navigate('Player', {selectedMusic:item})}>
+                onPress={()=> navigation.navigate('Player', {selectedMusic:item, playList:dummyData.Favorites})}>
                 <View
                 style={{
                   flexDirection:'row',
