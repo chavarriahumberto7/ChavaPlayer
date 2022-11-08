@@ -36,19 +36,19 @@ export const Playlists=[
 export const Favorites=[
   {
     id:'001',
-    url:'',
-    title:'Holy (feat. Chance the Rapper)',
+    url:require('../../assets/Music/VoyAEntregar.mp3'),
+    title:'Voy a entregar mi corazon',
     album:'Great Album',
-    artist:'Justin Bieber',
-    artwork:require('../../assets/images/thumb_1.png')
+    artist:'Pablo Olivares',
+    artwork:require('../../assets/images/musicImages/PabloO.jpg')
   },
   {
     id:'002',
-    url:'',
-    title:'Thunder',
-    album:'Image Dragon',
-    artist:'Image Dragon',
-    artwork:require('../../assets/images/thumb_3.png')
+    url:require('../../assets/Music/YoQuieroMasDeTi.mp3'),
+    title:'Yo quiero mas De ti',
+    album:'Jaime Murrel Album',
+    artist:'Jaime Murrel',
+    artwork:require('../../assets/images/musicImages/JaimeM.jpg')
   },
   {
     id:'003',
